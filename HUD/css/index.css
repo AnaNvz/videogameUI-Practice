@@ -1,0 +1,826 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #515e5d13;
+    width: 100%;
+    /*background-image: conic-gradient(from 0deg at 50% 50%, #ffffff, #dfd7e7, #c0b1cf, #a08bb7, #8267a0, #634589, #432372, #1f005c); */
+    /*background: no-repeat center/80% url("../img/icons/image.png"); */
+  }
+
+  .container{
+    position: absolute;
+    top: 25%;
+    right: 25px;
+  }
+
+  .containerBL{
+    position: absolute;
+    bottom: 5%;
+    left: 25px;
+  }
+
+  .containerBRight{
+    position: absolute;
+    bottom: 5%;
+    right: 25px;
+  }
+
+  .rewards{ /* Container */
+    display: flex;
+    position: relative;
+    width: 40vh; /* 300px */
+    height: 8vh; 
+    margin-bottom: 1vh;
+  }
+
+  #text{
+    position: relative;
+    color:#ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2vh;
+  }
+
+  .textMargin{
+    float:left;
+    margin-left: 1vw;
+  }
+
+  .gradientPanelBG{ /* Background */
+    display: flex;
+    position: relative;
+    width: 100%; /* 16vw */
+    height: 100%; /* 8vh */
+    background: linear-gradient(0deg, rgba(60, 9, 226, 0.4)10%, rgba(26, 18, 43, 0)100%);
+    -webkit-clip-path:polygon(100% 0, 100% 70%, 81% 73%, 75% 100%,0 100%, 0 0);
+    clip-path:polygon(100% 0, 100% 70%, 81% 73%, 75% 100%,0 100%, 0 0);
+  }
+
+  .rewardBottomLineCommon{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #5a5a5a;
+    opacity: 0.5;
+    -webkit-clip-path:polygon(80% 65%, 100% 65%, 100% 75%, 80% 80%, 75% 100%, 0 100%, 0 95%, 75% 95%);
+    clip-path: polygon(80% 65%, 100% 65%, 100% 75%, 80% 80%, 75% 100%, 0 100%, 0 95%, 75% 92%);
+  }
+
+  .rewardBottomLineUncommon{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #37cc70;
+    opacity: 0.6;
+    -webkit-clip-path:polygon(80% 65%, 100% 65%, 100% 75%, 80% 80%, 75% 100%, 0 100%, 0 95%, 75% 95%);
+    clip-path: polygon(80% 65%, 100% 65%, 100% 75%, 80% 80%, 75% 100%, 0 100%, 0 95%, 75% 92%);
+  }
+
+  .rewardBottomLineRare{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #377dcc;
+    opacity: 0.5;
+    -webkit-clip-path:polygon(80% 65%, 100% 65%, 100% 75%, 80% 80%, 75% 100%, 0 100%, 0 95%, 75% 95%);
+    clip-path: polygon(80% 65%, 100% 65%, 100% 75%, 80% 80%, 75% 100%, 0 100%, 0 95%, 75% 92%);
+  }
+
+  .rewardBottomLineEpic{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #7253ff;
+    opacity: 0.6;
+    -webkit-clip-path:polygon(80% 65%, 100% 65%, 100% 75%, 80% 80%, 75% 100%, 0 100%, 0 95%, 75% 95%);
+    clip-path: polygon(80% 65%, 100% 65%, 100% 75%, 80% 80%, 75% 100%, 0 100%, 0 95%, 75% 92%);
+  }
+
+.rewardBottomLineLegendary{
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #ffd153;
+  opacity: 0.6;
+  -webkit-clip-path:polygon(80% 65%, 100% 65%, 100% 75%, 80% 80%, 75% 100%, 0 100%, 0 95%, 75% 95%);
+  clip-path: polygon(80% 65%, 100% 65%, 100% 75%, 80% 80%, 75% 100%, 0 100%, 0 95%, 75% 92%);
+  }
+
+.sectionText{
+  display: block;
+  position: absolute;
+  width: 75%;
+  height: 100%;
+  margin-left: 3.5vw;
+  }
+
+.IconBG_border{
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-image: url(../img/icons/border_.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  }
+
+.rewardIconBG_mask{
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  mask-image: url(../img/icons/border_.png);
+  -webkit-mask-image: url(../img/icons/border_.png);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size:contain;
+  mask-size: contain;
+  mix-blend-mode: multiply;
+  background-color: #808080;
+  position: absolute;
+  }
+
+.common {
+  background-color: #353535;
+  clip-path: polygon(17% 0, 100% 0, 100% 83%, 86% 100%, 0 100%, 0 16%);
+}
+
+.uncommon {
+  background-color: #008f39;
+  clip-path: polygon(17% 0, 100% 0, 100% 83%, 86% 100%, 0 100%, 0 16%);
+}
+
+.rare {
+  background-color: #1f379e;
+  clip-path: polygon(17% 0, 100% 0, 100% 83%, 86% 100%, 0 100%, 0 16%);
+}
+
+.epic{
+  background-color: #4c2882;
+  clip-path: polygon(17% 0, 100% 0, 100% 83%, 86% 100%, 0 100%, 0 16%);
+}
+
+.legendary {
+  background-color: #efb810;
+  clip-path: polygon(17% 0, 100% 0, 100% 83%, 86% 100%, 0 100%, 0 16%);
+}
+
+.borderCommon
+{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #808080;
+  clip-path: polygon(50% 0%, 100% 0%, 100% 85%, 85% 100%, 0% 100%, 0% 15%, 15% 0%, 50% 0%, 50% 5%, 19% 5%, 5% 20%, 5% 95%, 80% 95%, 95% 79%, 95% 5%, 50% 5%);
+}
+
+.borderUncommon
+{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #03cf55;
+  clip-path: polygon(50% 0%, 100% 0%, 100% 85%, 85% 100%, 0% 100%, 0% 15%, 15% 0%, 50% 0%, 50% 5%, 19% 5%, 5% 20%, 5% 95%, 80% 95%, 95% 79%, 95% 5%, 50% 5%);
+}
+
+.borderRare
+{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #4eafff;
+  clip-path: polygon(50% 0%, 100% 0%, 100% 85%, 85% 100%, 0% 100%, 0% 15%, 15% 0%, 50% 0%, 50% 5%, 19% 5%, 5% 20%, 5% 95%, 80% 95%, 95% 79%, 95% 5%, 50% 5%);
+}
+
+.borderEpic
+{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #c1a0f3;
+  clip-path: polygon(50% 0%, 100% 0%, 100% 85%, 85% 100%, 0% 100%, 0% 15%, 15% 0%, 50% 0%, 50% 5%, 19% 5%, 5% 20%, 5% 95%, 80% 95%, 95% 79%, 95% 5%, 50% 5%);
+}
+
+.borderLegendary
+{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #fce191;
+  clip-path: polygon(50% 0%, 100% 0%, 100% 85%, 85% 100%, 0% 100%, 0% 15%, 15% 0%, 50% 0%, 50% 5%, 19% 5%, 5% 20%, 5% 95%, 80% 95%, 95% 79%, 95% 5%, 50% 5%);
+}
+
+.rewardIconContainer{
+  display: flex;
+  position: absolute;
+  width: 4vw;
+  height: 90%;
+  margin-left: 0.5vw;
+  z-index: 0;
+}
+
+.icon1{
+  background-image: url(../img/icons/Icon.png);
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: center;
+}
+
+.icon2{
+  background-image: url(../img/icons/$.png);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+}
+
+.icon3{
+  background-image: url(../img/icons/Healing.png);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+}
+
+.icon4{
+  background-image: url(../img/icons/Icon-2.png);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+}
+
+/*lifebar section*/
+.BottomLeftContainer{ /* Container */
+  display: flex;
+  position: relative;
+  width: 20vw; 
+  height: 5vh; 
+  margin-bottom: 1vh;
+  margin-left: 5vw;
+}
+
+.BottomLeftBG{ /* Background */
+  display: flex;
+  position: relative;
+  width: 100%; /* 16vw */
+  height: 100%; /* 8vh */
+  background-image: url(../img/icons/Top-backing.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  /*background: linear-gradient(0deg, rgba(63, 19, 206, 0.2)0%, rgba(26, 18, 43, 0)100%);*/
+}
+
+.BottomLeftBGScaled{ /* Background scaled*/
+  display: flex;
+  position: relative;
+  width: 100%; /* 16vw */
+  height: 100%; /* 8vh */
+  background-image: url(../img/icons/Top-backing.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transform: scaleY(-1);
+  /*background: linear-gradient(0deg, rgba(63, 19, 206, 0.2)0%, rgba(26, 18, 43, 0)100%);*/
+}
+
+.BottomLeftTopIconsContainer{
+  display: flex;
+  position: relative;
+  width: 100%; /* 16vw */
+  height: 100%; /* 8vh */
+  background-color: #a076bd;
+  mix-blend-mode: multiply;
+  -webkit-mask-image: url(../img/icons/border_.png);
+  mask-image: url(../img/icons/border_.png);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size:contain;
+  mask-size: contain;
+}
+
+.BottomLeftLowDefIcon{
+  display: flex;
+  position: relative;
+  width: 13%; /* 16vw */
+  height: 100%; /* 8vh */
+  z-index: 0;
+  background-color: #c00c0c;
+  background-image: url(../img/icons/lowdef.png);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+  margin-left: 1vw;
+  border-style: solid;
+  border-color: #e396fa;
+}
+
+.BottomLeftSwordIcon{
+  display: flex;
+  position: relative;
+  width: 2.6vw; /* 16vw */
+  height: 100%; /* 8vh */
+  z-index: 0;
+  background-color: #6f0cc0;
+  background-image: url(../img/icons/sword.png);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+  margin-left: 1vw;
+  border-style: solid;
+  border-color: #e396fa;
+}
+
+.iconLowDef{
+  display: inline-block;
+  position: absolute;
+  width: 100%; /*9vw*/
+  height: 100%; /*7vh*/
+  z-index: 2;
+  background-color: #c00c0c;
+  background-image: url(../img/icons/lowdef.png);
+  background-repeat: no-repeat;
+}
+
+.iconcontainer{
+  display: flex;
+  width: 10%;
+  height: 75%;
+  margin-left: 1.5vw;
+  z-index: 0;
+}
+
+.iconLifeBar{
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-image: url(../img/icons/icons.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.iconShieldBar{
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-image: url(../img/icons/shield.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.iconLogoBar{
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-image: url(../img/icons/logo.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.BarContainer{
+  display: flex;
+  position: absolute;
+  width: 73%;
+  height: 50%;
+  z-index: 2;
+  margin-left: 4.3vw;
+}
+
+.lifeBarBG{
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%; /*  */
+  z-index: 2;
+  background: rgba(226, 105, 109, 0.3);
+  background-size: 100%;
+  -webkit-mask-image: url(../img/icons/border.png);
+  mask-image: url(../img/icons/border.png);
+  background-repeat: no-repeat;
+  mix-blend-mode: multiply;
+  -webkit-mask-size:cover;
+  mask-size: cover;
+  transform: scaleY(-1);
+}
+
+#lifeBar{
+  height: 100%;
+  display: flex;
+  position: absolute;
+  z-index: 2;
+  background: rgb(113,3,7);
+  background: linear-gradient(71deg, rgba(113,3,7,1) 0%, rgba(167,9,33,1) 35%, rgba(255,0,65,1) 100%);
+  background-size: 100%;
+  -webkit-mask-image: url(../img/icons/border.png);
+  mask-image: url(../img/icons/border.png);
+  background-repeat: no-repeat;
+  mix-blend-mode: multiply;
+  -webkit-mask-size:cover;
+  mask-size: cover;
+  transition: width 2s;
+  transition-timing-function: linear;
+}
+
+.lifeBar100{
+  width: 100%;
+}
+
+.lifeBar20{
+  width: 20%;
+}
+
+.lifeBar50{
+  width: 50%;
+}
+
+.lifeBar70{
+  width: 70%;
+}
+
+.lifeBar0{
+  width: 0%;
+}
+
+.shieldBarBG{
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%; /*  */
+  z-index: 2;
+  background: rgba(128, 189, 224, 0.3);
+  background-size: 100%;
+  -webkit-mask-image: url(../img/icons/border.png);
+  mask-image: url(../img/icons/border.png);
+  background-repeat: no-repeat;
+  mix-blend-mode: multiply;
+  -webkit-mask-size:cover;
+  mask-size: cover;
+
+}
+
+.logoBarBG{
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%; /*  */
+  z-index: 2;
+  background: rgba(215, 132, 226, 0.3);
+  background-size: 100%;
+  -webkit-mask-image: url(../img/icons/border.png);
+  mask-image: url(../img/icons/border.png);
+  background-repeat: no-repeat;
+  mix-blend-mode: multiply;
+  -webkit-mask-size:cover;
+  mask-size: cover;
+}
+
+#shieldBar{
+  display: flex;
+  position: absolute;
+  height: 100%;
+  z-index: 2;
+  background: rgba(1, 82, 158, 0.767);
+  background: linear-gradient(71deg, rgba(1,81,158,1) 0%, rgba(9, 133, 167, 1) 35%, rgba(0,228,255,1) 100%);
+  background-size: 100%;
+  -webkit-mask-image: url(../img/icons/border.png);
+  mask-image: url(../img/icons/border.png);
+  background-repeat: no-repeat;
+  mix-blend-mode: multiply;
+  -webkit-mask-size:cover;
+  mask-size: cover;
+  transition: width 2s;
+  transition-timing-function: linear;
+}
+
+.shieldBar20{
+  width: 20%;
+}
+
+.shieldBar100{
+  width: 100%;
+}
+
+.shieldBar70{
+  width: 70%;
+}
+
+.shieldBar50{
+  width: 50%;
+}
+
+.shieldBar0{
+  width: 0%;
+}
+
+
+.logoBar{
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: rgb(220, 152, 241);
+  background-size: 100%;
+  -webkit-mask-image: url(../img/icons/border.png);
+  mask-image: url(../img/icons/border.png);
+  background-repeat: no-repeat;
+  mix-blend-mode: multiply;
+  -webkit-mask-size:cover;
+  mask-size: cover;
+}
+/* Bottom right panels */
+
+.BottomRightContainer{ /* Container */
+  display: flex;
+  position: relative;
+  width: 20vw; 
+  height: 7vh; 
+
+}
+
+.BottomRightBG{
+  display: flex;
+  width: 100%; /* 16vw */
+  height: 100%; /* 8vh */
+  background-image: url(../img/icons/Top-backing.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+}
+
+.Border
+{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #fffffff6;
+  clip-path: polygon(50% 0%, 100% 0%, 100% 85%, 85% 100%, 0% 100%, 0% 15%, 15% 0%, 50% 0%, 50% 5%, 19% 5%, 5% 20%, 5% 95%, 80% 95%, 95% 79%, 95% 5%, 50% 5%);
+}
+
+.colorBorder1{
+  background-color: #e8c3fa;
+}
+
+.colorBorder2{
+  background-color: #ff8cf5;
+}
+
+.colorBorder3{
+  background-color: #b85f9d;
+}
+
+.squarecontainer{
+  display: flex;
+  width: 3vw;
+  height: 6vh;
+  margin-left: 1vw;
+  z-index: 0;
+  background-image: url(../img/icons/2.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: #4c2882;
+  clip-path: polygon(17% 0, 100% 0, 100% 83%, 86% 100%, 0 100%, 0 16%);
+}
+
+.weaponContainer{
+  display: flex;
+  width: 8vw;
+  height: 80%;
+  margin-left: 3.5vw;
+}
+
+.weaponImg{
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-image: url(../img/icons/Weapon.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.BottomRightBGScaled{
+  display: flex;
+  position: relative;
+  width: 100%; /* 16vw */
+  height: 100%; /* 8vh */
+  background-image: url(../img/icons/Top-backing.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-top: -2.2vh;
+  transform: scaleY(-1);
+}
+
+.barContainerBottomRight{
+  display: flex;
+  position: absolute;
+  width: 73%;
+  height: 50%;
+  z-index: 2;
+  margin-left: 4.5vw;
+  margin-top: 2vh;
+}
+
+.xpBar{
+  display: flex;
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  z-index: 2;
+  background: rgb(224, 195, 248);
+  background-size: 100%;
+  -webkit-mask-image: url(../img/icons/border.png);
+  mask-image: url(../img/icons/border.png);
+  background-repeat: no-repeat;
+  mix-blend-mode: multiply;
+  -webkit-mask-size:cover;
+  mask-size: cover;
+}
+
+.xpBarBG{
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%; /*  */
+  z-index: 2;
+  background: rgba(67, 1, 121, 0.144);
+  background-size: 100%;
+  -webkit-mask-image: url(../img/icons/border.png);
+  mask-image: url(../img/icons/border.png);
+  background-repeat: no-repeat;
+  mix-blend-mode: multiply;
+  -webkit-mask-size:cover;
+  mask-size: cover;
+
+}
+
+.iconContainerBottomRight{
+  display: flex;
+  width: 10%;
+  height: 40%;
+  margin-left: 2.1vw;
+  z-index: 0;
+  margin-top: 3.5vh;
+}
+
+.iconCharacters{
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-image: url(../img/icons/Icon-2.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
+.infiniteIcon{
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-image: url(../img/icons/Infinite.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
+.xpIconContainer{
+  width: 10%;
+  height: 50%;
+  margin-left: 2.3vw;
+  z-index: 0;
+  margin-top: 2vh;
+}
+
+.xpText{
+  font-weight: bold;
+  text-align: center;
+  font-style: italic;
+}
+
+.characterIconContainer{
+  width: 7%;
+  height: 50%;
+  margin-left: 2.7vw;
+}
+
+.characterContainer{
+  display: flex;
+  width: 2.5vw;
+  height: 70%;
+  margin-left: 1.5vw;
+  margin-bottom: 6vh;
+  margin-top: -2.8vh;
+  transform: scaleY(-1);
+}
+
+.characterContainer2{
+  position: relative;
+  width: 3vw;
+  height: 80%;
+  margin-left: 1.5vw;
+  margin-bottom: 6vh;
+  margin-top: -2.8vh;
+  transform: scaleY(-1);
+}
+
+.squareIconcontainer{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  
+  background-color: #9b7acc;
+  clip-path: polygon(17% 0, 100% 0, 100% 83%, 86% 100%, 0 100%, 0 16%);
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+}
+.overlay {
+  z-index: 9;
+  background: #946bf3;
+}
+.countdownBorder
+{
+  z-index: 9;
+  opacity: 1;
+  background-color: #fffffff6;
+  clip-path: polygon(50% 0%, 100% 0%, 100% 85%, 85% 100%, 0% 100%, 0% 15%, 15% 0%, 50% 0%, 50% 5%, 19% 5%, 5% 20%, 5% 95%, 80% 95%, 95% 79%, 95% 5%, 50% 5%);
+}
+
+.icon1Img{
+  background-image: url(../img/icons/1.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.icon2Img{
+  background-image: url(../img/icons/2.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.icon3Img{
+  background-image: url(../img/icons/3.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.icon4Img{
+  background-image: url(../img/icons/4.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+@keyframes Counter {
+  0% {  clip-path: polygon(50% 0%, 100% 0%, 100% 85%, 85% 100%, 0% 100%, 0% 15%, 15% 0%, 50% 0%, 50% 5%, 19% 5%, 5% 20%, 5% 95%, 80% 95%, 95% 79%, 95% 5%, 50% 5%);}
+  10%{ clip-path: polygon(100% 0%, 100% 0%, 100% 85%, 85% 100%, 0% 100%, 0% 15%, 15% 0%, 50% 0%, 50% 5%, 19% 5%, 5% 20%, 5% 95%, 80% 95%, 95% 79%, 95% 5%, 100% 5%);}
+  30%{ clip-path: polygon(100% 85%, 100% 85%, 100% 85%, 85% 100%, 0% 100%, 0% 15%, 15% 0%, 50% 0%, 50% 5%, 19% 5%, 5% 20%, 5% 95%, 80% 95%, 95% 79%, 95% 79%, 95% 79%);}
+  40%{ clip-path: polygon(85% 100%, 85% 100%, 85% 100%, 85% 100%, 0% 100%, 0% 15%, 15% 0%, 50% 0%, 50% 5%, 19% 5%, 5% 20%, 5% 95%, 80% 95%, 80% 95%, 80% 95%, 80% 95%);}
+  60%{ clip-path: polygon(0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 15%, 15% 0%, 50% 0%, 50% 5%, 19% 5%, 5% 20%, 5% 95%, 5% 95%, 5% 95%, 5% 95%, 5% 95%);}
+  80%{ clip-path: polygon( 0% 15%,  0% 15%, 0% 15%,  0% 15%,  0% 15%, 0% 15%, 15% 0%, 50% 0%, 50% 5%, 19% 5%, 5% 20%, 5% 20%, 5% 20%, 5% 20%, 5% 20%, 5% 20%);}
+  90%{ clip-path: polygon( 15% 0%,  15% 0%, 15% 0%,  15% 0%,  15% 0%, 15% 0%, 15% 0%, 50% 0%, 50% 5%, 19% 5%, 19% 5%, 19% 5%, 19% 5%, 19% 5%, 19% 5%, 19% 5%);}
+  100%{ clip-path: polygon(50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 5%, 50% 5%, 50% 5%, 50% 5%, 50% 5%,50% 5%, 50% 5%, 50% 5%);}
+}
+
+.animationCounter{
+  animation-name: Counter;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes rewardAnimation{
+  0%{left:45vh;}
+  10%{left:45vh;}
+  15%{left:0vh;}
+  85%{left:0vh;}
+  90%{left:45vh;}
+  100%{left:45vh;}
+}
+
+.animationRewardAnimation{
+  animation-name: rewardAnimation;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode:forwards;
+}
